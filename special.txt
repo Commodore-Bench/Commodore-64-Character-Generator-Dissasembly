@@ -1,0 +1,9 @@
+R: round
+H: high
+L: low
+P: left part
+F: flipped
+Q: right part
+I: inverted
+D: Diagonal (Left Top)
+E: Diagonal (Right Top)

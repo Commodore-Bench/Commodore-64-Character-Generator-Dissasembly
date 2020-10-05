@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title>CharGen</title>
+    <script src="convert.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function updateFinal(obj) {
+         var bin = "";
+         row = obj.getElementsByTagName("td")
+         toh = obj.getElementsByTagName("th")[0]
+         tod = obj.getElementsByTagName("th")[1]
+         for (var i = 0, col; col = row[i]; i++) {
+           bin += col.innerHTML;
+         }
+         hex = ConvertBase.bin2hex(Number(bin))
+         dec = ConvertBase.bin2dec(Number(bin))
+         toh.innerHTML = "$" + hex.toString()
+         tod.innerHTML = dec.toString()
+      }
+    </script>
+    <script type="text/javascript">
+      function swapFinal(obj) {
+         var bin = "";
+         var cr = 0;
+         table = document.getElementById("chargen");
+         row = table.getElementsByTagName("td");
+         tot = table.getElementsByTagName("th");
+         for (var i = 0, col; col = row[i]; i++) {
+           bin += col.innerHTML;
+           cr = i;
+         }
+         dec = ConvertBase.bin2dec(Number(bin))
+         tot[cr].style.color = #ff471a;
+         tot[cr].innerHTML = dec.toString()
+      }
+    </script>
+    <script type="text/javascript">
+      function updateValue(obj) {
+        if (obj.innerHTML == '0') {
+          obj.style.backgroundColor = '#867ADE';
+          obj.innerHTML = '1'
+          updateFinal(obj.parentElement)
+        } else {
+          obj.style.backgroundColor = '#483AAA';
+          obj.innerHTML = '0'
+          updateFinal(obj.parentElement)
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function updateRow(val, type, rown) {
+        console.log(type)
+        if (type == "hex") {
+          bin = ConvertBase.hex2bin(val).toString();
+        } else if (type == "dec") {
+          bin = ConvertBase.dec2bin(val).toString();
+        } else {
+          bin = val
+        }
+        while (bin.length < 8) {
+          bin = "0" + bin;
+        }
+        table = document.getElementById("chargen");
+        line = table.getElementsByTagName("tr")[rown - 1];
+        row = line.getElementsByTagName("td")
+        for (var i = 0, col; col = row[i]; i++) {
+          if (bin.charAt(i) != col.innerHTML) {
+            updateValue(col);
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function updateTable(type, val1, val2, val3, val4, val5, val6, val7, val8) {
+        updateRow(val1, type, 1)
+        updateRow(val2, type, 2)
+        updateRow(val3, type, 3)
+        updateRow(val4, type, 4)
+        updateRow(val5, type, 5)
+        updateRow(val6, type, 6)
+        updateRow(val7, type, 7)
+        updateRow(val8, type, 8)
+      }
+    </script>
+  </head>
+  <body>
+    <div class="centered">
+      <table border="1">
+        <tbody id="chargen">
+          <tr>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+			      <th>$0</th>
+				  <th>0</th>
+          </tr>
+          <tr class="tableformat">
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <td onclick='updateValue(this)'>0</td>
+            <th>$0</th>
+			<th>0</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

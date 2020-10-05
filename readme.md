@@ -19,6 +19,7 @@ The total filesize of the rom is 4096 bytes.
 
 ## Character images
 ![Commodore 64 Upper charset](http://www.coding64.org/wp-content/uploads/2014/10/c64_upp.gif)
+
 ![Commodore 64 Lower charset](http://www.coding64.org/wp-content/uploads/2014/10/c64_low.gif)
 ## About this repository
 ### Files

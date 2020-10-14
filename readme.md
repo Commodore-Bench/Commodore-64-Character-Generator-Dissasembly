@@ -14,7 +14,9 @@ The chip the commodore 64 used is a MOS 901225-01
 The characters in the commodore 64 are pixels in a 8x8(64 what a coincidence!) grid in which the pixels can be of two colors: The background color(Represented by a 0) and the foreground color(Represented by a 1).
 ### Let's Talk about numbers
 Each character occupies 8 bytes.
+
 There are 512 characters separed in two charactersets(Uppercase & Lowercase) of 256 characters which are separed in 128 charactersets (Normal & inverted) (You can see them below).
+
 The total filesize of the rom is 4096 bytes.
 
 ## Character images
@@ -29,9 +31,13 @@ I have made a quick & dirty character editor in html which includes some superba
 The special letter's meaning in "chargen.asm" cna be found in "special.txt".
 ### Chargen.asm
 The structure of the file is very simple:
+
 db(Define Byte) binary_data;Represented Character
+
 This line 7 more times
+
 [Return]
+
 And repeat
 
 The Represented Character portion is written in ANSI and some especial case there's a Unicoide character inserted (If you can't see unicoide characters in your editor I've added a little description at it's side).
@@ -42,6 +48,7 @@ For example I used the [Netwide Assembler](https://www.nasm.us/) myself with the
 
 ### Contributing
 Well, there's nothing stopping you from making a pull request.
+
 If you feel that there's a better symbol for representing the commodore 64 character or you've noticed that I have done a mistake feel free to make one.
 
 ## Webgraphy

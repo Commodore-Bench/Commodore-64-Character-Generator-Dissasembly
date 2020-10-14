@@ -26,8 +26,11 @@ The total filesize of the rom is 4096 bytes.
 ## About this repository
 ### Files
 I have included the original character generator rom as "orgcg.bin".
+
 The code itself is in "chargen.asm"(NOTE: It has the CRLF format).
+
 I have made a quick & dirty character editor in html which includes some superbasic functions to load characters. Use updateRow("value", "type(dec, hex or bin)", "row number") or updateTable("type(dec, hex or bin)", "value 1", "value 2", "value 3", "value 4", "value 5", "value 6", "value 7", "value 8") on the JavaScript console to load the characters.
+
 The special letter's meaning in "chargen.asm" cna be found in "special.txt".
 ### Chargen.asm
 The structure of the file is very simple:

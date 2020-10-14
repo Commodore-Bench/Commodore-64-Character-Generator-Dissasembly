@@ -43,7 +43,7 @@ This line 7 more times
 
 And repeat
 
-The Represented Character portion is written in ANSI and some especial case there's a Unicoide character inserted (If you can't see unicoide characters in your editor I've added a little description at it's side).
+The Represented Character portion is written in ANSI and some special case there's a Unicoide character inserted (If you can't see unicoide characters in your editor I've added a little description at it's side).
 
 ### Assembling
 In theory any Assembler can assemble the source code if they suport the define byte instruction, the binary data type and commentaries.

@@ -52,7 +52,7 @@ For example I used the [Netwide Assembler](https://www.nasm.us/) myself with the
 ### Contributing
 Well, there's nothing stopping you from making a pull request.
 
-If you feel that there's a better symbol for representing the commodore 64 character or you've noticed that I have done a mistake feel free to make one.
+If you feel that there's a better symbol for representing the commodore 64 character or you've noticed that I have done a mistake, feel free to make one.
 
 ## Webgraphy
 [Coding 64](http://www.coding64.org/)
